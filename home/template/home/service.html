@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}My Home Page{% endblock title %}
+
+{% block content %}
+
+<p>นี่คือตัวอย่างให้บริการ ไม่ใช่บริการจริง ..เป็นการอธิบายการเขียนเว็บสนใจดูคลิปผ่านลิ้งค์: <a href="https://www.youtube.com/watch?v=rRVWQCpZ_CI">ดูคลิป</a></p>
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title pricing-card-title">0 บาท<small class="text-muted fw-light">ต่อเดือน</small></h4>
+            <ul class="list-unstyled mt-4 mb-4">
+              <li>ตอบคำถามเกี่ยวกับ python ในเพจฟรี</li>
+              <li>สอบถามปัญหาต่างๆเกี่ยวกับ IOT</li>
+              <li>แนะนำแหล่งเรียนรู้ python</li>
+              <li>มีวิดีโอให้ดูฟรีในยูทูป</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">สมัครเลย</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">สมาชิกรายเดือน</h4>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title pricing-card-title">100 บาท<small class="text-muted fw-light">ต่อเดือน</small></h4>
+            <ul class="list-unstyled mt-4 mb-4">
+              <li>ดูวิดีโอในกลุ่ม private ฟรี</li>
+              <li>บริการตอบคำถามพิเศษ</li>
+              <li>รีโมทไปแก้ปัญหา 2 ครั้ง</li>
+              <li>ดูคลิปพื้นฐานได้ทุกตอน</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">สมัครเลย</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Unlimited</h4>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title pricing-card-title">1,000 บาท<small class="text-muted fw-light">ต่อเดือน</small></h4>
+            <ul class="list-unstyled mt-4 mb-4">
+              <li>ดูคลิปที่เปิดสอนในเพจ</li>
+              <li>มี ebook ให้อ่านฟรี</li>
+              <li>สามารถใช้พื้นที่ออฟฟิส</li>
+              <li>รีโมทไปแก้ปัญหา 10 ครั้ง</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">สมัครเลย</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}

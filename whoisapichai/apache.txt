@@ -1,0 +1,29 @@
+Alias /static /home/apichaiadmin/whoisapichai/static
+	<Directory /home/apichaiadmin/whoisapichai/static>
+		Require all granted
+	</Directory>
+
+	Alias /media /home/apichaiadmin/whoisapichai/media
+	<Directory /home/apichaiadmin/whoisapichai/media>
+		Require all granted
+	</Directory>
+
+	<Directory /home/apichaiadmin/whoisapichai/whoisapichai>
+				<Files wsgi.py>
+			Require all granted
+		</Files>
+		</Directory>
+
+	WSGIScriptAlias / /home/apichaiadmin/whoisapichai/whoisapichai/wsgi.py
+	WSGIDaemonProcess django_app python-path=/home/apichaiadmin/whoisapichai python-home=/home/apichaiadmin/venv
+	WSGIProcessGroup django_app
+
+
+cmd: cd /home/apichaiadmin
+cmd: sudo chown :www-data whoisapichai/db.sqlite3
+cmd: sudo chmod 664 whoisapichai/db.sqlite3
+cmd: sudo chown :www-data whoisapichai/
+cmd: sudo chown -R :www-data whoisapichai/media
+cmd: sudo chown -R 775 whoisapichai/media
+
+

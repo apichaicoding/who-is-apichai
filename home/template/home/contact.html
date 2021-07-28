@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}My Home Page{% endblock title %}
+
+{% block content %}
+
+{% if status %} 
+  {% if status == 'success' %}
+    <h3></h3>
+    <div class="alert alert-success">
+      <strong>สำเร็จ!</strong>ทางเราได้รับข้อความแล้ว จะติดต่อกลับอีกครั้ง ขอบคุณ
+    </div>
+  {% else %}
+    <div class="alert alert-warning">
+      <strong>บันทึกไม่สำเร็จ!</strong>กรุณากรอกข้อมูลให้ครบถ้วน
+    </div>
+  {% endif %}
+{% endif %}
+
+<div class="container">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>หัวข้อ</label>
+      <input class="form-control" type="text" name="title" id="title">
+    </div>
+    <div class="form-group">
+      <label>อีเมลล์</label>
+      <input class="form-control" type="text" name="email" id="email">
+    </div>
+     <div class="form-group">
+      <label form="detail">รายละเอียด</label>
+      <textarea class="form-control" rows="5" id="detail" name="detail"></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">ส่งข้อมความ</button>
+  </form>
+</div>
+
+{% endblock content %}
